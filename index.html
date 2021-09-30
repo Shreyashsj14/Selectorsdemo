@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Selectors</title>
+  <style>
+
+    /* Universal Selector */
+    * {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+
+
+    /* Element/Tag/Type Selectors */
+    body {
+      background-color: #333;
+    }
+  
+
+    /* Class Selector */
+    .primary-heading {
+      color: blue;
+    }
+
+
+
+    /* ID Selectors */
+    #welcome {
+      background-color: #f4f4f4;
+    }
+    #about {
+        color: white;
+    }
+
+
+
+    /* Attribute Selector */
+    [disabled] {
+        cursor:not-allowed;
+    }
+
+
+
+    /* Pseudo Selector */
+    button:hover {
+        background:rgb(112, 112, 245)
+    }
+
+
+
+    /* Tree-structural pseudo-classes selectors */
+    li:first-child{
+        color:red;
+    }
+    li:last-child {
+        color: rgb(212, 20, 206);
+    }
+    li:nth-child(3) {
+        color: orange;
+    }
+    li:nth-last-child(2) {
+        color: seagreen;
+    }
+
+
+
+
+    /* Grouping multiple selectors */
+    #welcome, #about {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+
+
+    /* Nested Selectors */
+    #welcome p {
+      font-size: 20px;
+    }
+
+
+
+    /* Child Selector */
+    p > span {
+        color:red;
+    }
+
+
+
+    /* Adjacent Sibling Selector */
+    #first+li {
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+    <h2 class="primary-heading">Welcome</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span disabled>Quod qui iusto perferendis</span> nisi officia quidem ad enim maiores animi maxime.</p>
+    <ul>
+        <li id="first">Lorem ipsum dolor1</li>
+        <li id="second">Lorem ipsum dolor2</li>
+        <li id="third">Lorem ipsum dolor3</li>
+        <li id="fourth">Lorem ipsum dolor4</li>
+        <li id="fifth">Lorem ipsum dolor5</li>
+    </ul>
+  </div>
+  <div id="about">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laudantium voluptatum dolorum iur.</p>
+  </div>
+</body>
+</html>
